@@ -1,0 +1,49 @@
+.nav__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-button {
+	padding: 0.25rem;
+	margin: 1rem;
+	background-color: transparent;
+	border: none;
+	opacity: 1;
+}
+
+.menu-button img {
+	height: 3ch;
+}
+
+.menu-button__label {
+	font-family: var(--sans-serif);
+	font-weight: 700;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}
+
+@media (width < 350px) {
+	.menu-button__label {
+		display: none;
+	}
+}
+
+#nav--mobile.nav {
+	display: block;
+}
+
+#nav--mobile .nav__links {
+	display: block;
+	overflow: hidden;
+	padding: 0 0.5rem;
+	max-height: 0;
+	transition: max-height 400ms ease-in-out, padding 400ms ease-in-out;
+}
+
+#nav--mobile .nav__links.open {
+	max-height: 300px;
+	padding: 0.5rem;
+}

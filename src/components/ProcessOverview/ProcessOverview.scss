@@ -1,0 +1,39 @@
+.process {
+	border-top: solid 4px var(--background-secondary);
+
+	&__heading {
+		margin: 2rem auto;
+	}
+}
+
+.process-step {
+	margin: 1rem auto;
+	border-radius: var(--br-mid);
+	padding: 2rem;
+	background-color: var(--background-primary-shade);
+
+	&__header {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	&__icon {
+		width: 3ch;
+		height: 3ch;
+		opacity: 0.8;
+	}
+
+	&__heading {
+		color: var(--foreground);
+	}
+
+	&__body {
+		font-size: 1.2rem;
+		text-align: center;
+		text-wrap: pretty;
+		color: var(--foreground-shade);
+	}
+}

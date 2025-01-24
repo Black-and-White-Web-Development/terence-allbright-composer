@@ -1,0 +1,52 @@
+@use "/src/scss/util/" as u;
+
+:root {
+	--sans-serif: "Roboto", sans-serif;
+	--sans-serif-condensed: "Roboto Condensed", sans-serif;
+
+	font-family: var(--sans-serif);
+	font-style: normal;
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	line-height: 1.5;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--sans-serif);
+}
+
+h1 {
+	font-size: u.rem(40);
+	font-size: clamp(u.rem(40), 1.7rem + 4.1vw, u.rem(72));
+	font-weight: 700;
+	font-family: var(--sans-serif-condensed);
+	line-height: 1;
+	letter-spacing: -0.1rem;
+}
+
+h2 {
+	font-size: u.rem(32);
+	font-size: clamp(u.rem(32), 1.39rem + 3.08vw, u.rem(56));
+	font-weight: 900;
+	line-height: 1.2;
+	text-wrap: balance;
+}
+
+h3 {
+	font-size: u.rem(20);
+	font-size: clamp(u.rem(20), 1.15rem + 0.51vw, u.rem(24));
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+p,
+span,
+li {
+	font-family: var(--sans-serif);
+	text-wrap: pretty;
+}

@@ -1,0 +1,34 @@
+.u-fb-col-wrapper {
+	--space-lr: 4rem;
+	--space-gap: 1rem;
+	--col-count: 2;
+	display: grid;
+	grid-template-columns:
+		1fr
+		repeat(
+			var(--col-count),
+			calc(
+				(min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) * var(--space-gap)) /
+					var(--col-count)
+			)
+		)
+		1fr;
+	column-gap: var(--space-gap);
+}
+
+@media (width >= 43.75em) {
+	.u-fb-col-wrapper {
+		--space-lr: 8rem;
+		--space-gap: 2rem;
+		--col-count: 6;
+	}
+}
+@media (width >= 62.5em) {
+	.u-fb-col-wrapper {
+		--col-count: 12;
+	}
+}
+
+.u-fb-col-wrapper > * {
+	grid-column: 2/-2;
+}

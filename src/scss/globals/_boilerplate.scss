@@ -1,0 +1,30 @@
+:root {
+	--box-shadow-dark: 2px 2px 8px hsl(0, 0%, 0%, 0.1);
+	--box-shadow-light: 2px 2px 8px hsl(0, 0%, 0%, 0.5);
+	--box-shadow: var(--box-shadow-dark);
+
+	--br-light: 0.25rem;
+	--br-mid: 0.5rem;
+	--br-heavy: 1rem;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	color: var(--foreground-tint);
+
+	background-color: var(--background-primary);
+}
+
+input,
+textarea {
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}

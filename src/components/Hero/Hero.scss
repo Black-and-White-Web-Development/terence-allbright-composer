@@ -1,0 +1,35 @@
+.hero {
+	justify-content: center;
+	padding: 4rem 0;
+	padding-top: 8.5rem;
+	text-align: center;
+	background-image: linear-gradient(15deg, hsl(202, 73%, 28%) 0%, hsl(173, 46%, 66%) 100%);
+
+	&__img-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__img {
+		width: 8rem;
+		height: auto;
+		filter: invert(1);
+	}
+
+	&__heading {
+		padding: 1rem 0;
+		color: white;
+	}
+
+	&__description {
+		padding: 1rem 0;
+
+		font-family: var(--sans-serif);
+		font-size: 1.25rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-wrap: balance;
+		letter-spacing: 0.2rem;
+		color: white;
+	}
+}
