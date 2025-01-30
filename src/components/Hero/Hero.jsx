@@ -1,16 +1,9 @@
 import PropTypes from "prop-types";
 import "./Hero.scss";
 
-const Hero = function ({
-	heading,
-	description,
-	icon = "/src/assets/cluny-house-consulting-logo.svg",
-}) {
+const Hero = function ({ heading, description }) {
 	return (
 		<header className="hero u-fb-col-wrapper">
-			<div className="hero__img-wrapper">
-				<img className="hero__img" src={icon} alt="" />
-			</div>
 			<h1 className="hero__heading">{heading}</h1>
 			<p className="hero__description">{description}</p>
 		</header>

@@ -24,7 +24,6 @@ Navigation.propTypes = {
 		PropTypes.shape({
 			path: PropTypes.string.isRequired,
 			label: PropTypes.string.isRequired,
-			icon: PropTypes.string.isRequired,
 		})
 	).isRequired,
 };

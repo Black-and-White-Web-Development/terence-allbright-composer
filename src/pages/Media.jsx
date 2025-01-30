@@ -1,0 +1,37 @@
+import Hero from "/src/components/Hero/Hero";
+import Headline from "/src/components/Headline/Headline";
+import List from "/src/components/List/List";
+
+const Media = function () {
+	return (
+		<>
+			<Hero heading="Life Coaching" description="Managing whatever life throws at you" />
+			<section className="u-fb-col-wrapper">
+				<Headline heading="Being the best person you can be">
+					<p>Life might be a box of chocolates, but some of what is in there is not very nice.</p>
+					<p>
+						We all have to deal with problems, crisis, emergencies for ourselves and for others, and
+						sometimes we just need help to get clarity and find a way forward.
+					</p>
+					<List
+						listHeading="People looking for life coaching are asking themselves some of the following questions"
+						listItems={[
+							"How do I move on from difficult times?",
+							"How do I help others move on?",
+							"How do I cope with everything that is happening?",
+							"When I am helping everyone else, who is helping me?",
+						]}
+					/>
+					<p>
+						Coping with life&apos;s trials and tribulations shouldn&apos;t be a lonely life. Having
+						someone to talk to, sometimes to rant at and get it all out, or just to reassure you
+						that you are doing all you can, can help you get through tough times and build a
+						brighter future.
+					</p>
+				</Headline>
+			</section>
+		</>
+	);
+};
+
+export default Media;

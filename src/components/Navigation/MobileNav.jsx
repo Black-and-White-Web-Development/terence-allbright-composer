@@ -4,7 +4,6 @@ import { useState } from "react";
 import "./MobileNav.scss";
 import "./DesktopNav.scss";
 
-import logo from "/src/assets/cluny-house-consulting-logo.svg";
 import hamburger from "/src/assets/hamburger.svg";
 import close from "/src/assets/close.svg";
 
@@ -20,8 +19,7 @@ const MobileNav = function ({ routes }) {
 			<nav id="nav--mobile" className="nav" role="MobileNav" aria-label="Main navigation">
 				<header className="nav__header">
 					<Link id="home-link" className="nav__link" to="/">
-						<img className="nav__icon" src={logo} alt="Cluny House Consulting logo" />
-						Cluny House Consulting
+						Website title
 					</Link>
 					<button
 						className="menu-button nav__button"
@@ -37,7 +35,7 @@ const MobileNav = function ({ routes }) {
 					</button>
 				</header>
 				<ul className={`nav__links ${isMenuOpen ? "open" : ""}`}>
-					{routes.map(({ path, label, icon }) => (
+					{routes.map(({ path, label }) => (
 						<li key={path} onClick={() => setIsMenuOpen(false)}>
 							<NavLink
 								className={({ isActive }) =>
@@ -46,7 +44,6 @@ const MobileNav = function ({ routes }) {
 								to={path}
 								aria-label={`Navigate to ${label}`}
 							>
-								<img className="nav__icon" src={icon} alt="" />
 								{label}
 							</NavLink>
 						</li>
@@ -62,7 +59,6 @@ MobileNav.propTypes = {
 		PropTypes.shape({
 			path: PropTypes.string.isRequired,
 			label: PropTypes.string.isRequired,
-			icon: PropTypes.string.isRequired,
 		})
 	).isRequired,
 };

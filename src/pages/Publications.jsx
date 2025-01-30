@@ -4,16 +4,10 @@ import List from "/src/components/List/List";
 import ProcessOverview from "/src/components/ProcessOverview/ProcessOverview";
 import Contact from "/src/components/Contact/Contact";
 
-import idea from "/src/assets/idea.svg";
-
-const LifeCoaching = function () {
+const Publications = function () {
 	return (
 		<>
-			<Hero
-				heading="Life Coaching"
-				description="Managing whatever life throws at you"
-				icon={idea}
-			/>
+			<Hero heading="Life Coaching" description="Managing whatever life throws at you" />
 			<section className="u-fb-col-wrapper">
 				<Headline heading="Being the best person you can be">
 					<p>Life might be a box of chocolates, but some of what is in there is not very nice.</p>
@@ -74,4 +68,4 @@ const LifeCoaching = function () {
 	);
 };
 
-export default LifeCoaching;
+export default Publications;

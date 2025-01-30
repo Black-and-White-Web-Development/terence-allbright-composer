@@ -62,12 +62,6 @@
 			transition: opacity 400ms, text-shadow 1200ms;
 		}
 	}
-
-	&__icon {
-		width: 2ch;
-		height: auto;
-		fill: var(--cl-primary);
-	}
 }
 
 #home-link {
@@ -82,31 +76,8 @@
 	text-shadow: none;
 }
 
-#home-link .nav__icon {
-	border: solid 2px var(--cl-primary);
-	border-color: var(--cl-primary) !important;
-	border-radius: 50%;
-	padding: 0.25rem;
-	width: 4rem;
-	height: auto;
-}
-
-.nav__link--active .nav__icon {
-	filter: brightness(0);
-}
-
 @media (prefers-color-scheme: dark) {
-	.nav__link,
-	.nav__button {
-		--cl-emphasis: hsl(var(--emphasis-hue), 70%, 30%);
-		filter: brightness(2);
-	}
-
 	.nav__link--active {
 		box-shadow: 0 1px 2px hsl(0, 0%, 0%, 0.8);
-	}
-
-	.nav__link--active .nav__icon {
-		filter: brightness(100);
 	}
 }
