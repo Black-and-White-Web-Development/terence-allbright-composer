@@ -6,7 +6,7 @@ const Contact = function () {
 	return (
 		<>
 			<Hero heading="Career Coaching" description="Achieve and Grow" />
-			<section className="u-fb-col-wrapper">
+			<section className="fb-col-wrapper">
 				<Headline heading="Unleash the potential of you">
 					<p>Career coaching helps you plan the steps to achieve your life goals.</p>
 					<p>

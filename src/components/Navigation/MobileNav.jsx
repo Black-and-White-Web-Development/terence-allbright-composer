@@ -15,7 +15,7 @@ const MobileNav = function ({ routes }) {
 	};
 
 	return (
-		<header className="u-fb-col-wrapper nav__wrapper">
+		<header className="fb-col-wrapper nav__wrapper">
 			<nav id="nav--mobile" className="nav" role="MobileNav" aria-label="Main navigation">
 				<header className="nav__header">
 					<Link id="home-link" className="nav__link" to="/">

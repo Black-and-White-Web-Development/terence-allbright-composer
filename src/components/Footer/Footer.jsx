@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 const Footer = function () {
 	return (
-		<footer className="footer u-fb-col-wrapper">
+		<footer className="footer fb-col-wrapper">
 			<p className="footer__text">
 				Copyright © {new Date().getFullYear()} Cluny House Consulting. All rights reserved.
 			</p>

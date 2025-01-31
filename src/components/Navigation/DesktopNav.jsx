@@ -4,7 +4,7 @@ import "./DesktopNav.scss";
 
 const DesktopNav = function ({ routes }) {
 	return (
-		<header className="u-fb-col-wrapper nav__wrapper">
+		<header className="fb-col-wrapper nav__wrapper">
 			<nav className="nav" role="navigation" aria-label="Main Navigation">
 				<Link id="home-link" className="nav__link" to="/">
 					Website title
