@@ -1,10 +1,10 @@
 @use "/src/scss/util/" as u;
 
 :root {
-	--sans-serif: "Roboto", sans-serif;
-	--sans-serif-condensed: "Roboto Condensed", sans-serif;
+	--sans-serif: "Poppins", sans-serif;
+	--serif: "Playfair Display", serif;
 
-	font-family: var(--sans-serif);
+	font-family: var(--serif);
 	font-style: normal;
 	font-weight: 400;
 	font-optical-sizing: auto;
@@ -21,15 +21,17 @@ body {
 }
 
 h1 {
+	font-family: var(--serif);
 	font-size: u.rem(40);
 	font-size: clamp(u.rem(40), 1.7rem + 4.1vw, u.rem(72));
 	font-weight: 700;
-	font-family: var(--sans-serif-condensed);
 	line-height: 1;
 	letter-spacing: -0.1rem;
+	text-wrap: balance;
 }
 
 h2 {
+	font-family: var(--sans-serif);
 	font-size: u.rem(32);
 	font-size: clamp(u.rem(32), 1.39rem + 3.08vw, u.rem(56));
 	font-weight: 900;
@@ -38,6 +40,7 @@ h2 {
 }
 
 h3 {
+	font-family: var(--sans-serif);
 	font-size: u.rem(20);
 	font-size: clamp(u.rem(20), 1.15rem + 0.51vw, u.rem(24));
 	font-weight: 700;
@@ -47,6 +50,6 @@ h3 {
 p,
 span,
 li {
-	font-family: var(--sans-serif);
+	font-family: var(--serif);
 	text-wrap: pretty;
 }
