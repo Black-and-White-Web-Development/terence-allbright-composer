@@ -5,9 +5,9 @@ import "./DesktopNav.scss";
 const DesktopNav = function ({ routes }) {
 	return (
 		<header className="fb-col-wrapper nav__wrapper">
-			<nav className="nav" role="navigation" aria-label="Main Navigation">
-				<Link id="home-link" className="nav__link" to="/">
-					Website title
+			<nav className="nav nav--desktop" role="navigation" aria-label="Main Navigation">
+				<Link class="nav__home-link" to="/">
+					Terence Allbright
 				</Link>
 				<ul className="nav__links">
 					{routes.map(({ path, label }) => (

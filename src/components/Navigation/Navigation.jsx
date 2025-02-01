@@ -4,11 +4,12 @@ import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
 const Navigation = function ({ routes }) {
-	const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+	const mobileNavBreakpoint = 600; // px
+	const [isMobile, setIsMobile] = useState(window.innerWidth <= mobileNavBreakpoint);
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsMobile(window.innerWidth < 1000);
+			setIsMobile(window.innerWidth < mobileNavBreakpoint);
 		};
 
 		window.addEventListener("resize", handleResize);
