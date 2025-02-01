@@ -9,3 +9,9 @@
 		transform: translateX(-4rem);
 	}
 }
+
+@keyframes grow {
+	to {
+		transform: scale(1.2);
+	}
+}
