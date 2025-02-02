@@ -11,7 +11,7 @@
 			var(--background-primary) var(--percentage),
 			transparent var(--percentage)
 		);
-		--cover-image: url("/src/assets/images/terence-allbright-01.jpg");
+		--cover-image: url("/src/assets/images/terence-allbright-01-mobile.jpg");
 
 		min-height: 600px;
 		background-image: var(--cover-image);
@@ -20,6 +20,7 @@
 		background-size: cover;
 
 		@include u.breakpoint(medium) {
+			--cover-image: url("/src/assets/images/terence-allbright-01.jpg");
 			--image-fade: linear-gradient(95deg, var(--background-primary) 5%, transparent 25%);
 
 			background-image: var(--image-fade), var(--image-overlay), var(--cover-image);
@@ -97,13 +98,17 @@
 
 		&:hover {
 			color: var(--cl-primary);
-			background-color: var(--background-primary);
+			background-color: var(--background-primary-shade);
 			transition-duration: 200ms;
 
 			&::after {
 				transition-duration: 200ms;
 				transform: translateX(50%);
 			}
+		}
+
+		&:active {
+			background-color: var(--cl-secondary);
 		}
 	}
 }
