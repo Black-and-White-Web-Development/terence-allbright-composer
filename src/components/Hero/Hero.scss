@@ -1,35 +1,109 @@
-.hero {
-	justify-content: center;
-	padding: 4rem 0;
-	padding-top: 8.5rem;
-	text-align: center;
-	background-image: linear-gradient(15deg, hsl(202, 73%, 28%) 0%, hsl(173, 46%, 66%) 100%);
+@use "/src/scss/util" as u;
 
-	&__img-wrapper {
-		display: flex;
-		justify-content: center;
+.hero {
+	--navigation-height: 80px;
+
+	&__image-container {
+		--overlay-angle: 81deg;
+		--percentage: 20%;
+		--image-overlay: linear-gradient(
+			var(--overlay-angle),
+			var(--background-primary) var(--percentage),
+			transparent var(--percentage)
+		);
+		--cover-image: url("/src/assets/images/terence-allbright-01.jpg");
+
+		min-height: 600px;
+		background-image: var(--cover-image);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include u.breakpoint(medium) {
+			--image-fade: linear-gradient(95deg, var(--background-primary) 5%, transparent 25%);
+
+			background-image: var(--image-fade), var(--image-overlay), var(--cover-image);
+		}
+
+		@include u.breakpoint(large) {
+			background-image: var(--image-overlay), var(--cover-image);
+			background-position: top center;
+		}
 	}
 
-	&__img {
-		width: 8rem;
-		height: auto;
-		filter: invert(1);
+	&__content {
+		--content-padding: 32px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: u.rem(32);
+
+		padding-top: calc(var(--navigation-height) + var(--content-padding));
+		padding-bottom: var(--content-padding);
+
+		@include u.breakpoint(medium) {
+			min-height: 60vh;
+		}
 	}
 
 	&__heading {
-		padding: 1rem 0;
-		color: white;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		& .emphasis {
+			display: block;
+			margin-block-start: u.rem(20);
+			border-top: solid 3px var(--heading-secondary);
+			padding-top: u.rem(8);
+
+			color: var(--heading-secondary);
+
+			font-weight: 700;
+		}
 	}
 
-	&__description {
-		padding: 1rem 0;
+	&__subheading {
+		font-size: u.rem(20);
+		font-size: clamp(u.rem(20), 1.15rem + 0.51vw, u.rem(24));
+		line-height: 1.2;
+	}
+
+	&__cta {
+		padding: u.rem(12) u.rem(32);
+		border: solid 3px var(--cl-primary);
+		border-radius: var(--br-light);
 
 		font-family: var(--sans-serif);
-		font-size: 1.25rem;
-		font-weight: 300;
-		text-transform: uppercase;
-		text-wrap: balance;
-		letter-spacing: 0.2rem;
-		color: white;
+		font-size: u.rem(16);
+		font-size: clamp(u.rem(16), 0.5625rem + 1vw, u.rem(20));
+		font-weight: 600;
+		letter-spacing: 1px;
+
+		color: var(--background-primary);
+		background-color: var(--cl-primary);
+
+		transition-property: color, background-color;
+		transition-duration: 800ms;
+
+		&::after {
+			content: "➞";
+			display: inline-block;
+			margin-inline-start: 1ch;
+
+			transition-property: transform;
+			transition-duration: 800ms;
+		}
+
+		&:hover {
+			color: var(--cl-primary);
+			background-color: var(--background-primary);
+			transition-duration: 200ms;
+
+			&::after {
+				transition-duration: 200ms;
+				transform: translateX(50%);
+			}
+		}
 	}
 }

@@ -1,11 +1,11 @@
-import Hero from "/src/components/Hero/Hero";
 import Headline from "/src/components/Headline/Headline";
+import Hero from "/src/components/Hero/Hero";
 import List from "/src/components/List/List";
 
 const Home = function () {
 	return (
 		<>
-			<Hero heading="Cluny House Consulting" description="Helping you to be the best you can be" />
+			<Hero />
 			<section className="fb-col-wrapper">
 				<Headline heading="About">
 					<p>How many times have you thought &quot;I need help!&quot;</p>

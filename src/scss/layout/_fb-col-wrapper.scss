@@ -22,6 +22,30 @@
 		grid-column: 2 / -2;
 	}
 
+	&__content {
+		grid-column: 2 / -2;
+
+		@include u.breakpoint(medium) {
+			grid-column: 2 / 5;
+		}
+
+		@include u.breakpoint(large) {
+			grid-column: 2 / 8;
+		}
+	}
+
+	&__image {
+		grid-column: 1 / -1;
+
+		@include u.breakpoint(medium) {
+			grid-column: 5 / -1;
+		}
+
+		@include u.breakpoint(large) {
+			grid-column: 8 / -1;
+		}
+	}
+
 	@include u.breakpoint(medium) {
 		--space-lr: 8rem;
 		--space-gap: 2rem;
