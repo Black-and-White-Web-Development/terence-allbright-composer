@@ -1,8 +1,9 @@
+@use "/src/scss/util/" as u;
+
 .footer {
-	margin-top: 2rem;
-	padding: 2rem 0;
+	padding-block: u.rem(32);
 
 	color: hsl(0, 0%, 95%);
 
-	background-color: hsl(0, 0%, 20%);
+	background-color: hsl(0, 0%, 0%);
 }
