@@ -6,6 +6,12 @@
 	width: 100vw;
 
 	background-color: var(--cl-primary-shade);
+
+	& + * {
+		--nav-height: clamp(70px, 3.28125rem + 2.5vw, 80px);
+
+		padding-top: var(--nav-height);
+	}
 }
 
 .nav {

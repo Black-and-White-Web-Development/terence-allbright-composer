@@ -4,8 +4,8 @@
 	--navigation-height: 80px;
 
 	&__image-container {
-		--overlay-angle: 81deg;
-		--percentage: 20%;
+		--overlay-angle: 85deg;
+		--percentage: 15%;
 		--image-overlay: linear-gradient(
 			var(--overlay-angle),
 			var(--background-primary) var(--percentage),
@@ -13,9 +13,9 @@
 		);
 		--cover-image: url("/src/assets/images/terence-allbright-01-mobile.jpg");
 
-		min-height: 600px;
+		min-height: min(50vh, 400px);
 		background-image: var(--cover-image);
-		background-position: center;
+		background-position: center 25%;
 		background-repeat: no-repeat;
 		background-size: cover;
 
@@ -27,21 +27,18 @@
 		}
 
 		@include u.breakpoint(large) {
+			min-height: 800px;
 			background-image: var(--image-overlay), var(--cover-image);
-			background-position: top center;
 		}
 	}
 
 	&__content {
-		--content-padding: 32px;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: u.rem(32);
 
-		padding-top: calc(var(--navigation-height) + var(--content-padding));
-		padding-bottom: var(--content-padding);
+		padding-block: 32px;
 
 		@include u.breakpoint(medium) {
 			min-height: 60vh;
