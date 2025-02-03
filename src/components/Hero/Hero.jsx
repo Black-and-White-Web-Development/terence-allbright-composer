@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./Hero.scss";
 
 const Hero = function () {
@@ -19,12 +18,6 @@ const Hero = function () {
 			<div className="hero__image-container fb-col-wrapper__image"></div>
 		</section>
 	);
-};
-
-Hero.propTypes = {
-	heading: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	icon: PropTypes.string,
 };
 
 export default Hero;
