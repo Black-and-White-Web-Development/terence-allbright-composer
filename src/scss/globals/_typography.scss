@@ -21,6 +21,7 @@ body {
 }
 
 h1 {
+	margin-block-end: u.rem(16);
 	font-family: var(--serif);
 	font-size: u.rem(40);
 	font-size: clamp(u.rem(40), 1.7rem + 4.1vw, u.rem(72));
@@ -48,9 +49,29 @@ h3 {
 	text-transform: uppercase;
 }
 
+p {
+	font-size: u.rem(18);
+	line-height: 1.3;
+	text-wrap: pretty;
+
+	&.xsmall {
+		font-size: u.rem(16);
+	}
+
+	&.medium {
+		font-size: u.rem(20);
+		font-size: clamp(u.rem(20), 1.14rem + 0.49vw, u.rem(24));
+	}
+
+	&.large {
+		margin-block-end: u.rem(40);
+		font-size: u.rem(24);
+		font-size: clamp(u.rem(24), 1.39rem + 0.48vw, u.rem(28));
+	}
+}
+
 p,
 span,
 li {
 	font-family: var(--serif);
-	text-wrap: pretty;
 }

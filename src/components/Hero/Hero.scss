@@ -3,6 +3,8 @@
 .hero {
 	--navigation-height: 80px;
 
+	padding-block: 0;
+
 	&__image-container {
 		--overlay-angle: 85deg;
 		--percentage: 15%;
@@ -46,6 +48,7 @@
 	}
 
 	&__heading {
+		margin-block-end: 0;
 		font-weight: 400;
 		text-transform: uppercase;
 

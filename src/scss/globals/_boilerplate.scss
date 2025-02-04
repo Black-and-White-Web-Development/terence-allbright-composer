@@ -1,3 +1,5 @@
+@use "../util" as u;
+
 :root {
 	--box-shadow-dark: 2px 2px 8px hsl(0, 0%, 0%, 0.1);
 	--box-shadow-light: 2px 2px 8px hsl(0, 0%, 0%, 0.5);
@@ -18,6 +20,10 @@ body {
 	color: var(--foreground-tint);
 
 	background-color: var(--background-primary);
+}
+
+section {
+	padding-block: u.rem(32);
 }
 
 input,
