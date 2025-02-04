@@ -6,7 +6,7 @@ const DesktopNav = function ({ routes }) {
 	return (
 		<header className="fb-col-wrapper nav__wrapper">
 			<nav className="nav nav--desktop" role="navigation" aria-label="Main Navigation">
-				<Link class="nav__home-link" to="/">
+				<Link className="nav__home-link" to="/">
 					Terence Allbright
 				</Link>
 				<ul className="nav__links">
