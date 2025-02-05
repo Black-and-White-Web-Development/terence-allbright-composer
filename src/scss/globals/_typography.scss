@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-	margin-block-end: u.rem(16);
+	margin-block-end: u.rem(32);
 	font-family: var(--serif);
 	font-size: u.rem(40);
 	font-size: clamp(u.rem(40), 1.7rem + 4.1vw, u.rem(72));
@@ -33,12 +33,15 @@ h1 {
 }
 
 h2 {
-	font-family: var(--sans-serif);
-	font-size: u.rem(32);
-	font-size: clamp(u.rem(32), 1.39rem + 3.08vw, u.rem(56));
-	font-weight: 900;
-	line-height: 1.2;
+	margin-block-end: u.rem(16);
+	font-family: var(--serif);
+	font-size: u.rem(24);
+	font-size: clamp(u.rem(24), 0.625rem + 2vw, u.rem(32));
+	// font-weight: 400;
+	line-height: 1;
 	text-wrap: balance;
+	letter-spacing: -1px;
+	color: var(--cl-primary);
 }
 
 h3 {

@@ -2,7 +2,11 @@
 
 .biography {
 	&__paragraph {
-		margin-block: u.rem(16);
+		margin-block-end: u.rem(16);
 		max-width: 60ch;
+
+		&:last-child {
+			margin-block-end: 0;
+		}
 	}
 }
