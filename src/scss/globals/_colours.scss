@@ -100,8 +100,8 @@
 	--cl-neutral-200: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 90%);
 	--cl-neutral-300: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 85%);
 	--cl-neutral-400: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 80%);
-	--cl-neutral-500: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 50%);
-	--cl-neutral-600: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 30%);
+	--cl-neutral-500: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 45%);
+	--cl-neutral-600: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 35%);
 	--cl-neutral-700: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 25%);
 	--cl-neutral-800: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 15%);
 	--cl-neutral-900: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 0%);
@@ -133,6 +133,8 @@
 		--cl-primary-lightness: 60%;
 		--cl-neutral-saturation: 30%;
 		--cl-shade-multiplier: 0.6;
+
+		--cl-neutral-500: hsl(var(--cl-neutral-hue), var(--cl-neutral-saturation), 65%);
 
 		--heading-primary: var(--cl-neutral-200);
 		--heading-secondary: var(--cl-secondary);
