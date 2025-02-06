@@ -1,0 +1,32 @@
+@use "/src/scss/util/" as u;
+
+.publication {
+	max-width: 60ch;
+	display: flex;
+	flex-direction: column;
+	gap: u.rem(12);
+
+	padding: u.rem(20);
+
+	background-color: var(--background-primary-shade);
+	border-radius: var(--br-light);
+
+	&__instrument {
+		display: inline;
+
+		font-family: var(--sans-serif);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		color: var(--heading-secondary);
+
+		&:not(:last-child)::after {
+			content: ",";
+			margin-inline-end: 0.5ch;
+		}
+	}
+
+	&__description {
+		color: var(--text-secondary);
+	}
+}
