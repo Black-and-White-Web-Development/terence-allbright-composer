@@ -9,6 +9,7 @@ const Publications = function () {
 			title={pub.title}
 			instruments={pub.instruments}
 			description={pub.description}
+			link={pub.link}
 		/>
 	));
 
