@@ -1,54 +1,56 @@
+@use "/src/scss/util" as u;
+
 .list {
-	margin: 2rem 0;
-	border: solid 1px var(--background-secondary);
-	border-radius: var(--br-mid);
-	padding: 2rem;
-
-	background-color: var(--background-primary);
-	box-shadow: 1px 2px 4px hsl(0, 0%, 0%, 0.2);
-
-	&__heading {
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-		font-weight: 700;
-		color: var(--foreground);
-
-		&::after {
-			content: ":";
-		}
+	&__description {
+		margin-block-end: u.rem(16);
+		text-wrap: balance;
 	}
 
 	&__items-container {
-		padding-left: 0.5rem;
+		padding: u.rem(4) u.rem(16);
+
+		background-color: var(--background-primary-shade);
+		border-radius: var(--br-light);
+
+		@include u.breakpoint(medium) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: u.rem(16);
+		}
 	}
 
 	&__item {
-		list-style: none;
-		list-style-type: "–";
-		position: relative;
-
-		margin: 0.25rem;
-		padding: 0.25rem;
-		padding-left: 1rem;
-
-		font-size: 1.2rem;
-		font-weight: 500;
-		text-wrap: pretty;
-		line-height: 120%;
-		color: var(--foreground-shade);
-
-		transition: color 800ms, border-color 800ms, text-shadow 800ms;
-
-		&::marker {
-			font-weight: 700;
-			color: var(--midground);
-			transform: scaleY(2);
+		&:not(:last-child) {
+			border-bottom: solid 1.5px var(--background-secondary);
 		}
 
-		&:hover {
-			color: var(--cl-primary);
-			text-shadow: 0 0 1rem var(--cl-primary-shade);
-			transition: color 400ms, border-color 400ms, text-shadow 400ms;
+		@include u.breakpoint(medium) {
+			&:nth-child(2n):nth-last-child(-n + 2),
+			&:nth-child(2n-1):nth-last-child(-n + 2) {
+				border-bottom: none !important;
+			}
+		}
+	}
+
+	.ordered {
+		counter-reset: list-counter;
+
+		& .list__item {
+			counter-increment: list-counter;
+			display: flex;
+			align-items: center;
+
+			padding: u.rem(8) 0;
+
+			&::before {
+				content: counter(list-counter) ". ";
+				margin-inline-end: u.rem(8);
+				font-weight: bold;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--background-secondary-shade);
+			}
 		}
 	}
 }
