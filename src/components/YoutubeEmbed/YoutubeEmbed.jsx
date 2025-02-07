@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./YouTubeEmbed.scss";
+import "./YoutubeEmbed.scss";
 
 const YoutubeEmbed = ({ embedId }) => (
 	<div className="video-responsive">

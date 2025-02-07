@@ -1,7 +1,7 @@
 import Biography from "../components/Biography/Biography";
 import Quote from "../components/Quote/Quote";
 import TerenceAllbrightPortrait from "/src/assets/images/terence-allbright-02.jpg";
-import "./about.scss";
+import "./About.scss";
 
 const About = function () {
 	return (

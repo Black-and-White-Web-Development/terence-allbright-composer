@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import YoutubeEmbed from "/src/components/YoutubeEmbed/YouTubeEmbed";
+import YoutubeEmbed from "/src/components/YoutubeEmbed/YoutubeEmbed.jsx";
 import "./Video.scss";
 
 const Video = function ({ title, embedId, children }) {
