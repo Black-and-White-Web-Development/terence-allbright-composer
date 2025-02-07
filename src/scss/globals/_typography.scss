@@ -55,7 +55,9 @@ h3 {
 }
 
 p,
-li {
+li,
+dt,
+dd {
 	font-size: u.rem(16);
 	font-size: clamp(u.rem(16), 0.78125rem + 0.5vw, u.rem(18));
 	line-height: 1.3;
