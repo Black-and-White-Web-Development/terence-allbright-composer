@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
-
 import "./Footer.scss";
+
+import YouTubeIcon from "/src/assets/icons/youtube.svg";
+import LinkedInIcon from "/src/assets/icons/linkedin.svg";
+import ComposersEditionIcon from "/src/assets/icons/composers-edition.svg";
 
 const Footer = function () {
 	return (
@@ -53,7 +56,7 @@ const Footer = function () {
 						className="footer__link footer__link--social"
 					>
 						<img
-							src="/src/assets/icons/composers-edition.svg"
+							src={ComposersEditionIcon}
 							alt=""
 							width="32"
 							height="32"
@@ -66,13 +69,7 @@ const Footer = function () {
 						target="_blank"
 						className="footer__link footer__link--social"
 					>
-						<img
-							src="/src/assets/icons/youtube.svg"
-							alt=""
-							width="32"
-							height="32"
-							className="footer__link-icon"
-						/>
+						<img src={YouTubeIcon} alt="" width="32" height="32" className="footer__link-icon" />
 						YouTube
 					</a>
 					<a
@@ -80,13 +77,7 @@ const Footer = function () {
 						target="_blank"
 						className="footer__link footer__link--social"
 					>
-						<img
-							src="/src/assets/icons/linkedin.svg"
-							alt=""
-							width="32"
-							height="32"
-							className="footer__link-icon"
-						/>
+						<img src={LinkedInIcon} alt="" width="32" height="32" className="footer__link-icon" />
 						LinkedIn
 					</a>
 				</div>
