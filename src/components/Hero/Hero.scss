@@ -6,13 +6,6 @@
 	padding-block: 0;
 
 	&__image-container {
-		--overlay-angle: 85deg;
-		--percentage: 15%;
-		--image-overlay: linear-gradient(
-			var(--overlay-angle),
-			var(--background-primary) var(--percentage),
-			transparent var(--percentage)
-		);
 		--cover-image: url("/src/assets/images/terence-allbright-01-mobile.jpg");
 
 		min-height: min(50vh, 400px);
@@ -23,14 +16,14 @@
 
 		@include u.breakpoint(medium) {
 			--cover-image: url("/src/assets/images/terence-allbright-01.jpg");
-			--image-fade: linear-gradient(95deg, var(--background-primary) 5%, transparent 25%);
+			--clip-path: polygon(10% 100%, 100% 100%, 100% 0, 0 0);
 
-			background-image: var(--image-fade), var(--image-overlay), var(--cover-image);
+			-webkit-clip-path: var(--clip-path);
+			clip-path: var(--clip-path);
 		}
 
 		@include u.breakpoint(large) {
 			min-height: 800px;
-			background-image: var(--image-overlay), var(--cover-image);
 		}
 	}
 
