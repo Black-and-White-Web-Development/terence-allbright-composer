@@ -7,6 +7,7 @@ const Publications = function () {
 		<Publication
 			key={pub.id}
 			title={pub.title}
+			year={pub.year}
 			instruments={pub.instruments}
 			description={pub.description}
 			link={pub.link}
@@ -16,6 +17,7 @@ const Publications = function () {
 	return (
 		<section className="publications fb-col-wrapper">
 			<h1 className="publications__heading">Publications</h1>
+			<div className="publications__sorter"></div>
 			<div className="publications__publications">{pubsElements}</div>
 		</section>
 	);
