@@ -22,9 +22,19 @@
 		transition-duration: 400ms;
 	}
 
-	&__header {
-		display: grid;
-		gap: u.rem(8);
+	&__title {
+		margin-block-end: u.rem(16);
+	}
+
+	&__year {
+		display: inline;
+
+		font-family: var(--sans-serif);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		color: var(--text-secondary);
+		opacity: 0.8;
 	}
 
 	&__instrument {
