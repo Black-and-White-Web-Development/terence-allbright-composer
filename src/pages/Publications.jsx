@@ -4,6 +4,7 @@ import pubsData from "/src/data/publications.json";
 import "./Publications.scss";
 
 const Publications = function () {
+  const [searchQuery, setSearchQuery] = useState("");
 	const [sortType, setSortType] = useState("year-desc");
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const dropdownRef = useRef(null);
@@ -30,7 +31,10 @@ const Publications = function () {
 		"title-desc": (a, b) => b.title.localeCompare(a.title),
 	};
 
-	const sortedPubs = [...pubsData].sort(sortStrategies[sortType] || (() => 0));
+	const filteredPubs = pubsData.filter(pub =>
+		pub.title.toLowerCase().includes(searchQuery.toLowerCase())
+	);
+	const sortedPubs = [...filteredPubs].sort(sortStrategies[sortType] || (() => 0));
 
 	const options = [
 		{ name: "Chronological", func: "year-asc" },
@@ -54,10 +58,23 @@ const Publications = function () {
 		<section className="publications fb-col-wrapper">
 			<h1 className="publications__heading">Publications</h1>
 			<div className="publications__filters" ref={dropdownRef}>
+				<div className="publications__filter search">
+					<span className="publications__filter-label">Search:</span>
+					<input
+						type="text"
+						placeholder="Search by title..."
+						className="publications__filter-input search__input"
+						value={searchQuery}
+						onChange={e => setSearchQuery(e.target.value)}
+					/>
+				</div>
 				<div className="publications__filter dropdown">
 					<span className="publications__filter-label">Sort by:</span>
 					<div className="dropdown__wrapper">
-						<button className="dropdown__button" onClick={() => setDropdownOpen(isOpen => !isOpen)}>
+						<button
+							className="publications__filter-input dropdown__button"
+							onClick={() => setDropdownOpen(isOpen => !isOpen)}
+						>
 							{options.find(opt => opt.func === sortType)?.name}
 						</button>
 						{dropdownOpen && (
