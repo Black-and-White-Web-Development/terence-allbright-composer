@@ -26,7 +26,7 @@ const Publication = function ({ title, year, instruments, description, link }) {
 
 Publication.propTypes = {
 	title: PropTypes.string.isRequired,
-	year: PropTypes.number.isRequired,
+	year: PropTypes.string.isRequired,
 	instruments: PropTypes.arrayOf(PropTypes.string).isRequired,
 	description: PropTypes.string.isRequired,
 	link: PropTypes.string.isRequired,
