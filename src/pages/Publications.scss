@@ -1,14 +1,96 @@
 @use "/src/scss/util/" as u;
 
 .publications {
-	&__publications {
-		display: flex;
-		flex-direction: column;
-		gap: u.rem(16);
+  &__filters {
+    margin-block-end: u.rem(32);
+    border-style: solid;
+    border-width: 1px;
+    padding: u.rem(8) u.rem(20);
 
-		@include u.breakpoint(medium) {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(u.rem(400), 1fr));
-		}
-	}
+    background-color: var(--background-primary-shade);
+    border-color: var(--cl-primary);
+    border-radius: var(--br-light);
+  }
+
+  &__filter {
+    font-family: var(--sans-serif);
+    font-size: u.rem(16);
+
+    @include u.breakpoint(large) {
+      display: flex;
+      align-items: center;
+      gap: u.rem(8);
+    }
+  }
+
+  &__filter-label {
+    font-family: inherit;
+  }
+
+  &__publications {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(16);
+
+    @include u.breakpoint(medium) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(u.rem(400), 1fr));
+    }
+  }
 }
+
+.dropdown {
+  &__wrapper {
+    position: relative;
+    min-width: 220px;
+
+    background-color: var(--background-primary);
+  }
+
+  &__button {
+    border: solid;
+    border-width: 1px;
+    padding: u.rem(8);
+    min-width: 100%;
+
+    font-size: inherit;
+    text-align: left;
+
+    background-color: transparent;
+    border-color: var(--cl-primary);
+    border-radius: calc(var(--br-light) / 2);
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    transform: translateY(-2px);
+
+    border-style: none solid solid solid;
+    border-width: 1px;
+    min-width: calc(100% - 2px);
+
+    background-color: var(--background-primary);
+    border-color: var(--cl-primary);
+    border-radius: 0 0 calc(var(--br-light) / 2) calc(var(--br-light) / 2);
+  }
+
+  &__option {
+    cursor: pointer;
+
+    font-family: var(--sans-serif);
+    font-size: inherit;
+    padding: u.rem(8);
+
+    transition-property: color, background-color;
+    transition-duration: 200ms;
+    
+    &:hover {
+      color: white;
+      background-color: var(--cl-primary);
+      transition-duration: 400ms;
+    }
+  }
+}
+
