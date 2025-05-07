@@ -37,11 +37,10 @@ h2 {
 	font-family: var(--serif);
 	font-size: u.rem(24);
 	font-size: clamp(u.rem(24), 0.625rem + 2vw, u.rem(32));
-	// font-weight: 400;
 	line-height: 1;
 	text-wrap: balance;
 	letter-spacing: -1px;
-	color: var(--cl-primary);
+	color: var(--cl-primary-tint);
 }
 
 h3 {
