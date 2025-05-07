@@ -1,15 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Navigation from "/src/components/Navigation/Navigation";
-import Home from "/src/pages/Home";
-import About from "/src/pages/About";
-import Publications from "/src/pages/Publications";
-import Media from "/src/pages/Media";
-import Contact from "/src/pages/Contact";
+
+import Navigation from "/src/partials/Navigation/Navigation";
+import Footer from "/src/partials/Footer/Footer";
+
+import Home from "/src/pages//Home/Home";
+import About from "/src/pages/About/About";
+import Publications from "/src/pages/Publications/Publications";
+import Media from "/src/pages/Media/Media";
+import Contact from "/src/pages/Contact/Contact";
+
 import TermsOfUse from "/src/pages/legal/TermsOfUse";
 import PrivacyPolicy from "/src/pages/legal/PrivacyPolicy";
 import CookiePolicy from "/src/pages/legal/CookiePolicy";
 import Accessibility from "/src/pages/legal/Accessibility";
-import Footer from "/src//components/Footer/Footer";
 
 function App() {
 	const mainRoutes = [

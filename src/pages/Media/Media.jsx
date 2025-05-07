@@ -1,6 +1,6 @@
-import DescriptionList from "../components/DescriptionList/DescriptionList";
-import List from "../components/List/List";
-import Video from "/src/components/Video/Video";
+import DescriptionList from "/src/partials/DescriptionList/DescriptionList";
+import List from "/src/partials/List/List";
+import Video from "./Video/Video";
 import "./Media.scss";
 
 const Media = function () {

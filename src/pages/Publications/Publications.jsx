@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import Publication from "../components/Publication/Publication";
+import Publication from "./Publication/Publication";
 import pubsData from "/src/data/publications.json";
 import "./Publications.scss";
 
 const Publications = function () {
-  const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState("");
 	const [sortType, setSortType] = useState("year-desc");
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const dropdownRef = useRef(null);
