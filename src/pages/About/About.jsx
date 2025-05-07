@@ -1,5 +1,5 @@
-import Biography from "../components/Biography/Biography";
-import Quote from "../components/Quote/Quote";
+import Biography from "./Biography/Biography";
+import Quote from "./Quote/Quote";
 import TerenceAllbrightPortrait from "/src/assets/images/terence-allbright-02.jpg";
 import "./About.scss";
 
