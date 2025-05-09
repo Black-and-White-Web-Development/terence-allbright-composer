@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Hero from "./Hero/Hero";
+import Video from "../Media/Video/Video";
 import "./Home.scss";
 
 import pubsData from "/src/data/publications.json";
@@ -44,21 +45,29 @@ const Home = function () {
 									</li>
 								))}
 							</ul>
+						</div>
+						<footer className="feature__footer">
 							<Link to="/publications" className="feature__link">
 								View all publications
 							</Link>
-						</div>
+						</footer>
 					</article>
 					<article className="home__feature feature">
 						<header className="feature__header">
 							<img src={recording} alt="" className="feature__image" />
-							<h2 className="feature__heading">Latest recordings</h2>
+							<h2 className="feature__heading">Featured recording</h2>
 						</header>
 						<div className="feature__content">
-							<Link to="/publications" className="feature__link">
+							<article className="featured-vid">
+								<h3 className="featured-vid__heading">Narratives & Rituals</h3>
+								<Video title="Narratives & Rituals" embedId="tLgOI8JfVgI" showTitle={false}></Video>
+							</article>
+						</div>
+						<footer className="feature__footer">
+							<Link to="/media" className="feature__link">
 								View all media
 							</Link>
-						</div>
+						</footer>
 					</article>
 				</div>
 			</section>
