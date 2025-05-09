@@ -1,0 +1,21 @@
+@use "/src/scss/util" as u;
+
+.contact {
+	&__wrapper {
+		display: flex;
+		gap: u.rem(32);
+
+		@include u.breakpoint-down(medium) {
+			flex-direction: column;
+		}
+
+		& > * {
+			flex: 1;
+		}
+	}
+
+	&__image {
+		object-fit: cover;
+		border-radius: var(--br-light);
+	}
+}
