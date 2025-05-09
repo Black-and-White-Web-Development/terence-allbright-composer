@@ -6,11 +6,13 @@
 
 	&__features {
 		display: flex;
-		gap: u.rem(16);
+    flex-wrap: wrap;
+    gap: u.rem(32);
 	}
 
 	&__feature {
 		flex: 1;
+    min-width: 350px;
 
 		background-color: var(--background-primary-shade);
 		border-radius: var(--br-light);
