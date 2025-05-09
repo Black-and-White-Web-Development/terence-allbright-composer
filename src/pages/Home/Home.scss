@@ -1,0 +1,85 @@
+@use "/src/scss/util" as u;
+
+.home {
+	background-color: var(--background-secondary);
+
+	&__features {
+		display: flex;
+		gap: u.rem(16);
+	}
+
+	&__feature {
+		flex: 1;
+
+		background-color: var(--background-primary-shade);
+		border-radius: var(--br-light);
+		overflow: hidden;
+	}
+}
+
+.feature {
+	&__header {
+		position: relative;
+	}
+
+	&__heading {
+		position: absolute;
+		color: white;
+		bottom: u.rem(16);
+		left: u.rem(16);
+	}
+
+	&__image {
+		object-fit: cover;
+		filter: grayscale(1);
+		aspect-ratio: 3 / 2;
+	}
+
+	&__content {
+		margin: u.rem(16);
+	}
+
+	&__link {
+		display: inline-block;
+
+		border-style: solid;
+		border-width: 2px;
+		padding: u.rem(8) u.rem(16);
+
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		color: white;
+		background-color: var(--cl-primary);
+		border-color: var(--cl-primary);
+		border-radius: var(--br-light);
+
+		transition-property: color, background-color;
+		transition-duration: 800ms;
+
+		&::after {
+			content: "➞";
+			display: inline-block;
+			margin-inline-start: 1ch;
+
+			transition-property: transform;
+			transition-duration: 800ms;
+		}
+
+		&:hover {
+			color: var(--cl-primary);
+			background-color: var(--background-primary-shade);
+			transition-duration: 200ms;
+
+			&::after {
+				transition-duration: 200ms;
+				transform: translateX(50%);
+			}
+		}
+
+		&:active {
+			background-color: var(--cl-secondary);
+		}
+	}
+}
