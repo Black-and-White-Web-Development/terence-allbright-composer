@@ -14,6 +14,8 @@ import PrivacyPolicy from "/src/pages/legal/PrivacyPolicy";
 import CookiePolicy from "/src/pages/legal/CookiePolicy";
 import Accessibility from "/src/pages/legal/Accessibility";
 
+import PageNotFound from "/src/pages/PageNotFound/PageNotFound";
+
 function App() {
 	const mainRoutes = [
 		{ path: "/", label: "Home", page: <Home /> },
@@ -21,6 +23,7 @@ function App() {
 		{ path: "/publications", label: "Publications", page: <Publications /> },
 		{ path: "/media", label: "Media", page: <Media /> },
 		{ path: "/contact", label: "Contact", page: <Contact /> },
+		{ path: "*", page: <PageNotFound /> },
 	];
 
 	const otherRoutes = [
