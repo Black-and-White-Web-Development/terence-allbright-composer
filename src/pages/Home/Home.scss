@@ -11,12 +11,16 @@
 	}
 
 	&__feature {
+    min-width: 250px;
 		flex: 1;
-    min-width: 350px;
 
 		background-color: var(--background-primary-shade);
 		border-radius: var(--br-light);
 		overflow: hidden;
+
+    @include u.breakpoint(medium) {
+      min-width: 350px;
+    }
 	}
 }
 
