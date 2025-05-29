@@ -1,11 +1,14 @@
 @use "/src/scss/util/" as u;
 
 .publications {
+  margin-bottom: auto;
+
   &__filters {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: u.rem(32);
+
 
     margin-block-end: u.rem(32);
     border-style: solid;

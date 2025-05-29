@@ -96,7 +96,9 @@ const Publications = function () {
 					</div>
 				</div>
 			</div>
-			<div className="publications__publications">{pubsElements}</div>
+			<div className="publications__publications">
+				{pubsElements.length > 0 ? pubsElements : <p>No publications found.</p>}
+			</div>
 		</section>
 	);
 };
