@@ -72,7 +72,7 @@ MobileNav.propTypes = {
 	routes: PropTypes.arrayOf(
 		PropTypes.shape({
 			path: PropTypes.string.isRequired,
-			label: PropTypes.string.isRequired,
+			label: PropTypes.string,
 		})
 	).isRequired,
 };
