@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useDeferredValue, useEffect, useRef, useState } from "react";
 import Publication from "./Publication/Publication";
 import pubsData from "/src/data/publications.json";
 import "./Publications.scss";
@@ -7,7 +7,9 @@ const Publications = function () {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sortType, setSortType] = useState("year-desc");
 	const [dropdownOpen, setDropdownOpen] = useState(false);
+
 	const dropdownRef = useRef(null);
+	const deferredQuery = useDeferredValue(searchQuery);
 
 	useEffect(() => {
 		const handleClickOutside = e => {
@@ -32,7 +34,7 @@ const Publications = function () {
 	};
 
 	const filteredPubs = pubsData.filter(pub =>
-		pub.title.toLowerCase().includes(searchQuery.toLowerCase())
+		pub.title.toLowerCase().includes(deferredQuery.toLowerCase())
 	);
 	const sortedPubs = [...filteredPubs].sort(sortStrategies[sortType] || (() => 0));
 

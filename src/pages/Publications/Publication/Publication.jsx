@@ -1,7 +1,14 @@
+import React from "react";
 import PropTypes from "prop-types";
 import "./Publication.scss";
 
-const Publication = function ({ title, year, instruments, description, link }) {
+const Publication = React.memo(function Publication({
+	title,
+	year,
+	instruments,
+	description,
+	link,
+}) {
 	const instrumentElements = instruments.map((instrument, i) => (
 		<li key={i} className="publication__instrument small">
 			{instrument}
@@ -17,12 +24,11 @@ const Publication = function ({ title, year, instruments, description, link }) {
 			</header>
 			<p className="publication__description">{description}</p>
 			<a href={link} target="_blank" className="publication__link">
-				View on score on Composers Edition ➞{" "}
-				<span className="new-tab-message">(opens in new tab)</span>
+				View score on Composers Edition ➞<span className="new-tab-message">(opens in new tab)</span>
 			</a>
 		</article>
 	);
-};
+});
 
 Publication.propTypes = {
 	title: PropTypes.string.isRequired,
