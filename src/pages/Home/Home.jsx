@@ -4,8 +4,8 @@ import Video from "../Media/Video/Video";
 import "./Home.scss";
 
 import pubsData from "/src/data/publications.json";
-import composing from "/src/assets/images/composing.jpg";
-import recording from "/src/assets/images/recording.jpg";
+import recording from "/src/assets/images/narratives-and-rituals.webp";
+import manuscript from "/src/assets/images/terence-allbright-manuscript.webp";
 
 const getLatestPubs = (data, count = 3) => {
 	return data
@@ -30,7 +30,7 @@ const Home = function () {
 				<div className="home__features">
 					<article className="home__feature feature">
 						<header className="feature__header">
-							<img src={composing} alt="" className="feature__image" />
+							<img src={manuscript} alt="" className="feature__image" />
 							<h2 className="feature__heading">Latest compositions</h2>
 						</header>
 						<div className="feature__content">
