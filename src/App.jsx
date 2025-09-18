@@ -7,6 +7,7 @@ import Home from "/src/pages//Home/Home";
 import About from "/src/pages/About/About";
 import Publications from "/src/pages/Publications/Publications";
 import Media from "/src/pages/Media/Media";
+import News from "/src/pages/News/News";
 import Contact from "/src/pages/Contact/Contact";
 
 import TermsOfUse from "/src/pages/legal/TermsOfUse";
@@ -22,6 +23,7 @@ function App() {
 		{ path: "/about", label: "About", page: <About /> },
 		{ path: "/publications", label: "Publications", page: <Publications /> },
 		{ path: "/media", label: "Media", page: <Media /> },
+		{ path: "/news", label: "News", page: <News /> },
 		{ path: "/contact", label: "Contact", page: <Contact /> },
 		{ path: "*", page: <PageNotFound /> },
 	];
