@@ -9,7 +9,7 @@ const Footer = function () {
 	return (
 		<footer className="footer fb-col-wrapper">
 			<div className="footer__copyright-wrapper">
-				<h3 className="footer__copyright-heading">Terence Allbright Composer</h3>
+				<h3 className="footer__copyright-heading">Terence Allbright</h3>
 				<p className="footer__copyright-text">
 					Copyright © {new Date().getFullYear()} Terence Allbright. All rights reserved.
 				</p>

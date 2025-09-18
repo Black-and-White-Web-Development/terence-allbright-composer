@@ -1,0 +1,24 @@
+[
+	{
+		"id": "0",
+		"heading": "Musicians of All Saints",
+		"category": "Event",
+		"publicationDate": "Thursday, 18 September 2025",
+		"startDate": "Saturday, 17 January 2026",
+		"endDate": "",
+		"location": "St Michael's Church, High Street, Lewes BN7 1XU",
+		"link": {
+			"label": "Musicians of All Saints",
+			"href": "https://www.musiciansofallsaints.co.uk"
+		},
+		"description": [
+			"Conductor: Nicholas Houghton",
+			"",
+			"G F Handel Concerto Grosso in F major, opus 6 nr 2",
+			"Terence Allbright Grave & Harmonious Musick",
+			"Caroline Tyler new work (first performance)",
+			"Robin Milford Elegy for James Scott Duke of Monmouth and Buccleugh opus 50",
+			"Felix Mendelssohn String Symphony no 7 in D minor"
+		]
+	}
+]
