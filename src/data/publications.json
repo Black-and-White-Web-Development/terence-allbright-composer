@@ -214,5 +214,21 @@
 		"instruments": ["Piano"],
 		"description": "1. Leggiero; 2. Lontano; 3. Ansioso; 4. Oscuro; 5. Tranquillo; 6. Feroce.",
 		"link": "https://composersedition.com/terence-allbright-six-pieces-for-piano/"
+	},
+	{
+		"id": "28",
+		"title": "Arise, Arise",
+		"year": "1993",
+		"instruments": ["SATB choir a capella"],
+		"description": "English folksong arranged for SATB unaccompanied",
+		"link": "https://composersedition.com/terence-allbright-arise-arise/"
+	},
+	{
+		"id": "29",
+		"title": "Three Pieces by Debussy arr. Terence Allbright",
+		"year": "2025",
+		"instruments": ["Four violas"],
+		"description": "Petite Pièce was written in 1910 for clarinet and piano as a Morceau de Concours - a set piece for Paris Conservatoire performance examinations. Page d'album (1915), originally for solo piano, was Debussy's response to a request for a manuscript to be auctioned in aid of Vêtement du Blessé - a charity supporting wounded war veterans. Le petit nègre is Debussy's second cakewalk for solo piano and was composed in 1909 for Théodore Lack's elementary piano method. Arranged in 2025 by Terence Allbright for The Bare-Faced Violas.",
+		"link": "https://composersedition.com/claude-debussy-arr-terence-allbright-three-pieces/"
 	}
 ]
