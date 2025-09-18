@@ -5,28 +5,36 @@
 	background-color: var(--background-secondary);
 
 	&__features {
-		display: flex;
-    flex-wrap: wrap;
+		display: grid;
+    grid-template-columns: auto;
     gap: u.rem(32);
+    
+    @include u.breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 	}
 
 	&__feature {
-    min-width: 250px;
-		flex: 1;
-
 		background-color: var(--background-primary-shade);
 		border-radius: var(--br-light);
 		overflow: hidden;
-
-    @include u.breakpoint(medium) {
-      min-width: 350px;
-    }
 	}
 }
 
 .feature {
   display: flex;
   flex-direction: column;
+
+  &--news {
+    grid-column: 1 / -1;
+
+    & .article {
+      max-width: 100%;
+      margin-block: 2rem;
+      border: none;
+      padding: 0;
+    }
+  }
 
   &__header,
   &__footer {
@@ -53,6 +61,11 @@
 
 		color: white;
     background: linear-gradient(hsl(0, 0%, 0%, 0), hsl(0, 0%, 0%, 0.8));
+
+    &--news {
+      position: static;
+      background: var(--cl-primary);
+    }
 	}
 
 	&__image {
