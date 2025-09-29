@@ -54,6 +54,11 @@
 
 	&__description {
 		flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
 		color: var(--text-secondary);
 		margin-block-end: u.rem(8);
 	}
